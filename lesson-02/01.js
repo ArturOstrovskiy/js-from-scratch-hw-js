@@ -11,8 +11,17 @@
 const isAdmin = false
 const isVerifiedUser = true
 const hasSpecialPermission = true
-const hasTemporaryPass = false
+const hasTemporaryPass = true
 
-let isAccess
+let isAccess = false
 
 // your code
+
+if (isAdmin || isVerifiedUser) {
+	if (isAdmin) {
+		console.log("admin")
+	} else if (hasSpecialPermission || hasTemporaryPass) {
+		isAccess = true
+		console.log("user")
+	}
+} else console.log ("ТЫ не пройдешь!!!");
