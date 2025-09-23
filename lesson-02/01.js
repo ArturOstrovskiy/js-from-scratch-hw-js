@@ -19,6 +19,7 @@ let isAccess = false
 
 if (isAdmin || isVerifiedUser) {
 	if (isAdmin) {
+		isAccess = true
 		console.log("admin")
 	} else if (hasSpecialPermission || hasTemporaryPass) {
 		isAccess = true
