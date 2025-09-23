@@ -4,6 +4,25 @@
  * Результат сохраните в переменной grade.
  */
 
-const score = 70 // тестовое значение, можно изменять
+const score = 50 // тестовое значение, можно изменять
 let grade
 // your code
+if (score >= 0 && score <= 100) {
+	if (score >=0 && score <= 49) {
+		grade = "F";
+		console.log("Твоя оценка: " + grade)
+	} else if (score >= 50 && score <= 69) {
+		grade = "D";
+		console.log("Твоя оценка: " + grade)
+	} else if (score >= 70 && score <= 79) {
+		grade = "C";
+		console.log("Твоя оценка: " + grade)
+	} else if (score >= 80 && score <= 89) {
+		grade = "B";
+		console.log("Твоя оценка: " + grade)
+	} else  {
+		grade = "A";
+		console.log( grade)
+	}
+
+} else console.log("Введите корректное число")
