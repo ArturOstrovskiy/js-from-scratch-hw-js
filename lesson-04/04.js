@@ -13,10 +13,9 @@
 */
 
 function doubleEachCharacter(array) {
-	let doubledString = [];
+	let doubledString = '';
 	for (let i = 0; i < array.length; i++) {
-		let doubled = (array[i] + array[i]);
-		doubledString.push(doubled);
+		doubledString = doubledString + (array[i] + array[i]); // doubledString после = нужен, чтобы при каждом проходе цикла doubledString не переписывался заново, а к нему добавлялось новое значение (array[i] + array[i])
 	}
 	return doubledString;
 }
