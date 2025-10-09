@@ -13,11 +13,14 @@
 */
 
 function doubleEachCharacter(array) {
-	let doubledString = '';
-	for (let i = 0; i < array.length; i++) {
-		doubledString = doubledString + (array[i] + array[i]); // doubledString после = нужен, чтобы при каждом проходе цикла doubledString не переписывался заново, а к нему добавлялось новое значение (array[i] + array[i])
+	let doubled = []; // в начале тут пусто, но с каждой итерацией цикла значение doubled будет перезаписываться
+
+	for (let i = 0; i < array.length; i++) { // при первой итерации возьмется пустой doubled и к нему прибавятся два первых значения индекса array[i] ("h") массива array, после чего doubled присвоится значение пустого doubled + два значения array[i] и мы получим hh
+		// console.log(doubled);
+		let leter =(array[i] + array[i]); // doubled после = нужен, чтобы при каждом проходе цикла doubledString не переписывался заново, а к нему добавлялось новое значение (array[i] + array[i])
+		doubled.push(leter);
 	}
-	return doubledString;
+	return doubled;
 }
 
 myArray = 'hello';

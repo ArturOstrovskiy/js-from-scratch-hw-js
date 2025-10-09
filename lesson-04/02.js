@@ -27,13 +27,13 @@ const findUniqueElement = findUniqueElements(myArray)
 console.log('findUniqueElement ' + findUniqueElement)*/
 
 function findUniqueElements(array) {
-let result = [array[0]];
-for (let i = 1; i < array.length; i++) {
-	if (includesElement(result,array[i])) {
-		continue
+let result = [];
+for (let i = 0; i < array.length; i++) {
+	if (includesElement(result,array[i])) { //если в условии false, то выполняется то, что находится после if, а именно "result.push(array[i]);"
+		continue //если в условии true, то выполняется continue и данная итерация цикла завершается, и выполняется следующая итерация цикла
 	}
-	result.push(array[i]);
-}return result;
+	result.push(array[i]);// пушится в новый массив result = []
+}return result;//функция  findUniqueElements возвращает значение result
 }
 
 
