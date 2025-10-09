@@ -26,8 +26,8 @@ function doubleEachCharacter(array) {
 	let doubled = [];
 
 	for (let i = 0; i < array.length; i++) {
-		let leter = array[i] + array[i];
-		doubled.push(leter);
+		let letter = array[i] + array[i];
+		doubled.push(letter);
 	}
 	return doubled = doubled.join('');
 }

@@ -31,17 +31,17 @@ if (!includesElement (array1,array1[i]) && !includesElement (array2,array2[i])) 
 
 function findCommonElements(array1, array2) {
 	let result = [];
-	for (let i = 0; i < array1.length; i++) {
-		if (includesElement(array1, array2[i])) {
-			console.log(array2[i])
-			result.push(array2[i]);
+	for (let i = 0; i < array1.length || i < array2.length; i++) { //с таким условием не важно, какой массив длинее
+		if (includesElement(array2, array1[i])) { //сравниваем значения массива array1 с поочередным перебором индексов значений массива array2
+			// console.log(array2[i])
+			result.push(array1[i]);
 		}
 
 	}return result;
 }
 
 
-let findCommonElement = findCommonElements(['banana',2,5,3], [4,2,'banana',1]);
+let findCommonElement = findCommonElements(['banana',1,6,2,5,3], [4,2,'banana',1]);
 console.log('findCommonElement ' + findCommonElement)
 
 
