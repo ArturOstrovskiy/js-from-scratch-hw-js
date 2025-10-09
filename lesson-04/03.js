@@ -31,18 +31,20 @@ if (!includesElement (array1,array1[i]) && !includesElement (array2,array2[i])) 
 
 function findCommonElements(array1, array2) {
 	let result = [];
-	for (let i = 0; i < array1.length || i < array2.length; i++) { //с таким условием не важно, какой массив длинее
-		if (includesElement(array2, array1[i])) { //сравниваем значения массива array1 с поочередным перебором индексов значений массива array2
-			// console.log(array2[i])
-			result.push(array1[i]);
-		}
 
-	}return result;
+	for (let i = 0; i < array1.length; i++) {
+		const el = array1[i];
+
+		if (includesElement(array2, el)) { //сравниваем значения массива array1 с поочередным перебором индексов значений массива array2
+			result.push(el);
+		}
+	}
+	return result;
 }
 
 
 let findCommonElement = findCommonElements(['banana',1,6,2,5,3], [4,2,'banana',1]);
-console.log('findCommonElement ' + findCommonElement)
+console.log('findCommonElement ', findCommonElement)
 
 
 function includesElement(array, element) {

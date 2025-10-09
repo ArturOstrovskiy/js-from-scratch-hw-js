@@ -32,7 +32,7 @@ function doubleEachCharacter(array) {
 	return doubled = doubled.join('');
 }
 
-myArray = 'hello';
+myArray = 'hell1o';
 
 let double = doubleEachCharacter(myArray);
 console.log(double)
