@@ -26,10 +26,10 @@ function doubleEachCharacter(array) {
 	let doubled = [];
 
 	for (let i = 0; i < array.length; i++) {
-		let letter = array[i] + array[i];
-		doubled.push(letter);
+		doubled.push(array[i], array[i]);
 	}
-	return doubled = doubled.join('');
+
+	return doubled.join('');
 }
 
 myArray = 'hell1o';
