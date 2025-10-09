@@ -15,7 +15,7 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements(array) {
+/*function findUniqueElements(array) {
 	const uniqueElement = new Set(array);
 	const uniqueArray = Array.from(uniqueElement);
 return uniqueArray
@@ -24,7 +24,28 @@ return uniqueArray
 const myArray = [6,1,2,2,3,4,2];
 
 const findUniqueElement = findUniqueElements(myArray)
+console.log('findUniqueElement ' + findUniqueElement)*/
+
+function findUniqueElements(array) {
+let result = [array[0]];
+for (let i = 1; i < array.length; i++) {
+	if (includesElement(result,array[i])) {
+		continue
+	}
+	result.push(array[i]);
+}return result;
+}
+
+
+
+
+const myArray = [6,1,2,2,3,4,2];
+
+const findUniqueElement = findUniqueElements(myArray)
 console.log('findUniqueElement ' + findUniqueElement)
+
+
+
 
 function includesElement(array, element) {
 	for (let i = 0; i < array.length; i++) {
