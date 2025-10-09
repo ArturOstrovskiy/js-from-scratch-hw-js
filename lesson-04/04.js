@@ -29,7 +29,7 @@ function doubleEachCharacter(array) {
 		let leter = array[i] + array[i];
 		doubled.push(leter);
 	}
-	return doubled = doubled.toString();
+	return doubled = doubled.join('');
 }
 
 myArray = 'hello';
