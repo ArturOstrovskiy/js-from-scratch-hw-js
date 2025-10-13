@@ -35,10 +35,10 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(objectName ,creation, author, upDateValue) {
+function updateGallery(objectName ,creation, author) {
 	if (Object.hasOwn(objectName, creation)){
-		if  (objectName[creation] === author){
-			objectName[creation] = objectName[creation] + ' ,' + upDateValue
+		if  (objectName[creation] !== author){
+			objectName[creation] = author
 			console.log(objectName)
 		}
 	}		else {
@@ -46,9 +46,11 @@ function updateGallery(objectName ,creation, author, upDateValue) {
 		console.log(objectName)
 	}
 }
+updateGallery(gallery, 'Mona sadLisa', 'Leonardo da Vinci, 1503-1506')
+updateGallery(gallery, 'Mona sadLisa', 'Leonardo da Vinci, 1503-1506')
 updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
-updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali', 1231)
-updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci',1956)
+
+
 
 
 // const arr = Object.entries(gallery)
