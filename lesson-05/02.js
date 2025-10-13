@@ -35,20 +35,20 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(objectName ,creation, author) {
-	if (Object.hasOwn(objectName, creation)){
-		if  (objectName[creation] !== author){
-			objectName[creation] = author
+function updateGallery(objectName , creation, author) {
+	if (Object.hasOwn(objectName, creation)){ //Object.hasOwn - проверяет наличие в объекте objectName ключа creation и возвращает true или false
+		if  (objectName[creation] !== author){ //сравнивает ЗНАЧЕНИЕ ключа creation с новым значением, которое мы передаем в author
+			objectName[creation] = author //присваиваем новое значение ключу creation
 			console.log(objectName)
 		}
 	}		else {
-		objectName[creation] = author;
+		objectName[creation] = author; //создает новый ключ creation со значением author
 		console.log(objectName)
 	}
 }
 updateGallery(gallery, 'Mona sadLisa', 'Leonardo da Vinci, 1503-1506')
-updateGallery(gallery, 'Mona sadLisa', 'Leonardo da Vinci, 1503-1506')
-updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
+updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci')
+
 
 
 

@@ -16,10 +16,9 @@ const game = {
 		lumber: 100,
 	},
 	addResource: function (resource,amount) {
-		if (game.resources.hasOwnProperty(resource)) {
-			const keys = Object.keys(game.resources);
-			console.log(keys);
-			this.resources[resource] = this.resources[resource] + amount;
+		if (game.resources.hasOwnProperty(resource)) { //проверяет, внутри объекта game внутри которого есть объект resources есть ли в нем(resources) ключ resource
+			this.resources[resource] += amount; //это краткая запись
+			// this.resources[resource] = this.resources[resource] + amount; //это более полная
 			console.log(this.resources[resource])
 		}  else {
 			console.log("Invalid resource")
