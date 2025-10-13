@@ -37,8 +37,8 @@ for (let i = 0; i < array.length; i++) {
 }
 
 
-const myArray = [6,1,2,2,3,4,2];
-const findUniqueElement = findUniqueElements(myArray)
+let myArray = [6,1,2,2,3,4,2];
+let findUniqueElement = findUniqueElements(myArray)
 console.log('findUniqueElement ' + findUniqueElement)
 
 function includesElement(array, element) {

@@ -33,7 +33,7 @@ function findCommonElements(array1, array2) {
 	let result = [];
 
 	for (let i = 0; i < array1.length; i++) {
-		const el = array1[i];
+		let el = array1[i];
 
 		if (includesElement(array2, el)) { //сравниваем значения массива array1 с поочередным перебором индексов значений массива array2
 			result.push(el);

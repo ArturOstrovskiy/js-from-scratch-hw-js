@@ -22,7 +22,7 @@ function includesElement(array, element) {
 	}
 	return false;
 }
-const myArray = [6,1,2,2,3,4,2];
+let myArray = [6,1,2,2,3,4,2];
 let element = includesElement(myArray, 3);
 console.log(element)
 
