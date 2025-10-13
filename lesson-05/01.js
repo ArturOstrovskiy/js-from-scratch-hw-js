@@ -12,13 +12,18 @@
 
 const game = {
 	resources: {
-    gold: 250,
-    lumber: 100,
-  },
-  addResource(resource, amount) {
-	this.resource = resource;
-	this.amount = amount;
-	if (resources !== resources
-  }
-
+		gold: 250,
+		lumber: 100,
+	},
+	addResource(resource, amount) {
+		this.resource = resource;
+		this.amount = amount;
+		const keys = Object.keys(game);
+		console.log(keys)
+	}
 }
+
+
+
+// console.log(game.resources);
+// game.addResource('gold', 200);
