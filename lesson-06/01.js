@@ -28,7 +28,7 @@ const numbers = [1, 2, 3, 4, 5]
 const filter = (array, callback) => {
 	const result = []
 	for (let i = 0; i < array.length; i++) {
-		let element = array[i]
+		let element = array[i] //будет работать и без переменой
 		callback(element)
 		if (callback(element) === true) {
 			result.push(element)
@@ -43,7 +43,10 @@ const odd = (element) => {
 
 const oddNum = filter(numbers,odd)
 console.log(oddNum)
-
+/*const oddNumbers = filter(numbers, (element, index) => {
+	return element % 2 !== 0
+});
+console.log(oddNumbers)*/
 
 
 
