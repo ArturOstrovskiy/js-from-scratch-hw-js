@@ -29,7 +29,7 @@ const filter = (array, callback) => {
 	const result = []
 	for (let i = 0; i < array.length; i++) {
 		let element = array[i] //будет работать и без переменой
-		let index = i          //будет работать и без переменой
+		let index = array.indexOf(array[i])         //будет работать и без переменой
 		callback(element,index)
 		if (callback(element) === true) {
 			result.push(element)
@@ -38,6 +38,7 @@ const filter = (array, callback) => {
 }
 const odd = (element,i) => {
 	if (element % 2 !== 0){
+		console.log(i)
 		return true
 	}
 }
