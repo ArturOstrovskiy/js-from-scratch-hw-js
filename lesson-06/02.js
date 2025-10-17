@@ -29,9 +29,10 @@ const numbers = [1, 2, 3, 4, 5]
 const map = (array, callback) => {
 	const result = []
 	for (let i = 0; i < array.length; i++) {
-		let element = array[i] //будет работать и без переменной
-		callback(element)
-			result.push(callback(element))
+		let element = array[i]		//будет работать и без переменной
+		let index = i
+		callback(element,index)
+			result.push(callback(element,index))
 	}	return result
 }
 
@@ -42,7 +43,7 @@ const odd = (element) => {
 // const oddNum = map(numbers,odd)
 // console.log(oddNum)
 
-const doubledNumbers = map(numbers, (element, index) => {
-	return element * 2
+const doubledNumbers = map(numbers, (element, i) => {
+	return (element * 2) +'' + i
 })
 console.log(doubledNumbers)
