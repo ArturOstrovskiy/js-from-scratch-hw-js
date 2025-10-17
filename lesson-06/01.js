@@ -36,7 +36,7 @@ const filter = (array, callback) => {
 		}
 	}	return result
 }
-const odd = (element) => {
+const odd = (element,i) => {
 	if (element % 2 !== 0){
 		return true
 	}
