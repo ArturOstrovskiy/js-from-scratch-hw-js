@@ -29,9 +29,10 @@ const filter = (array, callback) => {
 	const result = []
 	for (let i = 0; i < array.length; i++) {
 		let element = array[i] //будет работать и без переменой
-		callback(element)
+		let index = i          //будет работать и без переменой
+		callback(element,index)
 		if (callback(element) === true) {
-			result.push(element)
+			result.push(element +''+ index)
 		}
 	}	return result
 }
