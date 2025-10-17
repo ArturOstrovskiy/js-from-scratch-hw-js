@@ -32,7 +32,7 @@ const filter = (array, callback) => {
 		let index = i          //будет работать и без переменой
 		callback(element,index)
 		if (callback(element) === true) {
-			result.push(element +''+ index)
+			result.push(element)
 		}
 	}	return result
 }
