@@ -37,12 +37,21 @@ const filter = (array, callback) => {
 	}	return result
 }
 
-const oddNumbers = filter(numbers, (element, index) => {
-	return element % 2 !== 0
-});
 
-console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 
+// const oddNumbers = filter(numbers, (element, index) => {
+// 	return element % 2 !== 0
+// });
+
+// console.log(oddNumbers) // Должен вывести: [1, 3, 5]
+//
+// const q = filter(['a', 'b', 'c'],(element,index)=> {
+// 	const indexes = [];
+// 	indexes.push(index);
+// 	return indexes;
+// })
+// console.log(q)
+//
 
 
 // const odd = (element,i) => {
