@@ -31,7 +31,6 @@ const map = (array, callback) => {
 	for (let i = 0; i < array.length; i++) {
 		let element = array[i]		//будет работать и без переменной
 		let index = i
-		callback(element,index)
 			result.push(callback(element,index))
 	}	return result
 }
