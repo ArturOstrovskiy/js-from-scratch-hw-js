@@ -30,7 +30,6 @@ const filter = (array, callback) => {
 	for (let i = 0; i < array.length; i++) {
 		let element = array[i] //будет работать и без переменной
 		// let index = array.indexOf(array[i])
-		callback(element,i)
 		if (callback(element,i) === true) {
 			// console.log(i)
 			result.push(element)
@@ -40,10 +39,11 @@ const filter = (array, callback) => {
 
 // const indexes = [];
 // const q = filter(['a', 'b', 'c'], (element, index) => {
+// 	console.log(index)
 // 	indexes.push(index);
-// 	// return false;
+// 	return false;
 // });
-// console.log(q)
+// console.log('gfdhf',q)
 
 // const oddNumbers = filter(numbers, (element, index) => {
 // 	return element % 2 !== 0
