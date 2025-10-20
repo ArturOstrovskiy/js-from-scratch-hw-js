@@ -31,13 +31,19 @@ const filter = (array, callback) => {
 		let element = array[i] //будет работать и без переменной
 		// let index = array.indexOf(array[i])
 		callback(element,i)
-		if (callback(element) === true) {
+		if (callback(element,i) === true) {
+			// console.log(i)
 			result.push(element)
 		}
 	}	return result
 }
 
-
+// const indexes = [];
+// const q = filter(['a', 'b', 'c'], (element, index) => {
+// 	indexes.push(index);
+// 	// return false;
+// });
+// console.log(q)
 
 // const oddNumbers = filter(numbers, (element, index) => {
 // 	return element % 2 !== 0
@@ -50,7 +56,7 @@ const filter = (array, callback) => {
 // 	indexes.push(index);
 // 	return indexes;
 // })
-// console.log(q)
+
 //
 
 
