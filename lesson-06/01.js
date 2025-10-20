@@ -28,23 +28,32 @@ const numbers = [1, 2, 3, 4, 5]
 const filter = (array, callback) => {
 	const result = []
 	for (let i = 0; i < array.length; i++) {
-		let element = array[i] //будет работать и без переменой
-		let index = array.indexOf(array[i])         //будет работать и без переменой
+		let element = array[i] //будет работать и без переменной
+		let index = array.indexOf(array[i])       
 		callback(element,index)
 		if (callback(element) === true) {
 			result.push(element)
 		}
 	}	return result
 }
-const odd = (element,i) => {
-	if (element % 2 !== 0){
-		console.log(i)
-		return true
-	}
-}
 
-const oddNum = filter(numbers,odd)
-console.log(oddNum)
+const oddNumbers = filter(numbers, (element, index) => {
+	return element % 2 !== 0
+});
+
+console.log(oddNumbers) // Должен вывести: [1, 3, 5]
+
+
+
+// const odd = (element,i) => {
+// 	if (element % 2 !== 0){
+// 		console.log(i)
+// 		return true
+// 	}
+// }
+
+// const oddNum = filter(numbers,odd)
+// console.log(oddNum)
 /*const oddNumbers = filter(numbers, (element, index) => {
 	return element % 2 !== 0
 });
