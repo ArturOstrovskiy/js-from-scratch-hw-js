@@ -44,6 +44,6 @@ const odd = (element) => {
 // console.log(oddNum)
 
 const doubledNumbers = map(numbers, (element, i) => {
-	return (element * 2)
+	return (element * 2) +'' + i
 })
 console.log(doubledNumbers)
