@@ -22,7 +22,7 @@ let currentIndex = 0;
 function currentIndexNum() {
 	if (currentIndex >= WEB_TECH_IMAGES.length) {
 		currentIndex = 0
-	} else if (currentIndex <= 0) {
+	} else if (currentIndex < 0) {
 		currentIndex = WEB_TECH_IMAGES.length-1
 	}
 }
