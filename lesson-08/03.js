@@ -15,4 +15,4 @@ function truncate(str, maxLength) {
 	return str
 }
 
-console.log(truncate("Короткddsdasdasdasddа", 20))
+console.log(truncate("Короткddsdasываdasdasddа", 20))
