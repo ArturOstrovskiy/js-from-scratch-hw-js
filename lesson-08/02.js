@@ -4,7 +4,12 @@
  */
 
 function isNumeric(str) {
+	// if(true && true) return true
+	// !isNaN(str), то есть если str НЕ будет NaN, то будет true
+	// Number(str), то есть если Number(str) сможет привести str в number, то будет true
+	// Если срабатывает if, то выполняется return true
 if(!isNaN(str) && Number(str)) return true;
+	// Если if не срабатывает, то выполняется return false;
 return false;
 }
 
