@@ -7,8 +7,16 @@
 */
 
 function capitalizeWords(someWords) {
+	//split'ом мы создали массив someWords и разделили его по пробелам (' ')
+	//map'ом мы к каждому элементу массива применили функцию
 	return someWords.split(' ').map(function (word) {
-	 return word[0].toUpperCase()+ word.slice(1);
+
+			//функция берет каждый элемент массива и находит у него элемент под индексом 0
+			//после чего применяет к нему метод toUpperCase()
+			//после чего .slice(1) добавляет к элементу с индексом 0 оставшееся элементы начиная с индекса 1 и до пробела
+			return word[0].toUpperCase() + word.slice(1);
+			//.join(' ') формирует из массива строку с пробелами между элементами
+
 	}).join(' ');
 }
-console.log(capitalizeWords("as ad asd"));
+console.log(capitalizeWords("Hello World From JavaScript"));
