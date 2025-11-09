@@ -6,7 +6,8 @@
 
   1. При клике на кнопку с питомцем, id питомца должен добавляться в массив cart.
   2. После добавления питомца в корзину, необходимо вызвать функцию updateCartDisplay (она обновит отображение корзины).
-  3. В корзину можно добавить не более 3 питомцев. Если пользователь пытается добавить больше, то в messageBox должен появится текст: 'Вы не можете добавить более 3 питомцев'
+  3. В корзину можно добавить не более 3 питомцев. Если пользователь пытается добавить больше,
+  то в messageBox должен появится текст: 'Вы не можете добавить более 3 питомцев'
 
   ❕❕❕ Представленный в задании код не следует изменять. Требуется только дописать обработчик события.
 
@@ -55,6 +56,7 @@ function updateCartDisplay() {
   for (let i = 0; i < cart.length; i++) {
     const petId = cart[i]
     const pet = PETS.find((item) => item.id === petId)
+
     const petSpanElement = document.createElement('li')
     petSpanElement.classList.add('pet')
     petSpanElement.textContent = pet.title
@@ -68,3 +70,23 @@ clearCartButton.addEventListener('click', function () {
 })
 
 // Твой код:
+function addToCart() {
+	const petElements = document.getElementsByClassName('pet')
+
+	for (let i = 0; i < petElements.length; i++) {
+		const petElement = petElements[i]
+		petElement.addEventListener('click', () => {
+			if (cart.length < 3) {
+				const petId = petElement.id
+				cart.push(petId);
+				updateCartDisplay()
+			} else {
+				messageBox.textContent = 'Вы не можете добавить более 3 питомцев';
+			}
+		})
+	}
+}
+addToCart()
+
+
+
