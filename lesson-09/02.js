@@ -34,6 +34,7 @@ let isTimerStarted = false
 let timerId
 
 startButton.addEventListener('click', () => {
+	//чтобы небыло несколько одновременно работающих таймеров.
 	if (isTimerStarted === false) {
 
 		let counter = 3;
@@ -42,15 +43,18 @@ startButton.addEventListener('click', () => {
 		function timerTick() {
 			countdownDisplay.textContent = counter;
 
+			//Если counter <= 0, то clearInterval(timerId); прекратит работу setInterval
 			if (counter <= 0) {
 				clearInterval(timerId);
+				//вместо counter будет выводиться "🚀"
 				countdownDisplay.textContent = "🚀";
+				//чтобы можно было еще раз запустить startButton
 				isTimerStarted = false;
-
 			}
 			counter--;
 		}
-
+		//вызывается функция, чтобы при клике она сработала до того как начнется таймер
+		//и пользрватель сразу видел 3, а не "Готовы?"
 		timerTick();
 		timerId = setInterval(timerTick, 1000);
 	}
