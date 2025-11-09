@@ -71,11 +71,31 @@ clearCartButton.addEventListener('click', function () {
 
 // Твой код:
 function addToCart() {
+	//присваиваем petElements массив значений с именем класса 'pet'
 	const petElements = document.getElementsByClassName('pet')
+	//Цикл for в функции addToCart используется для того,
+	// чтобы назначить обработчик события клика (addEventListener('click', ...))
+	// каждому отдельному элементу на вашей веб-странице, который имеет класс 'pet'.
+	//Без этого цикла код назначил бы обработчик только первому элементу, а остальные остались бы неактивными.
 
+	//Цикл for гарантирует, что когда пользователь кликнет на любую из 12 карточек,
+	// сработает соответствующий код, добавляющий ID этого конкретного питомца в массив cart
 	for (let i = 0; i < petElements.length; i++) {
-		const petElement = petElements[i]
+		//при каждой итерации цикла, petElement присваивается значение под индексом i массива petElements
+		//Лексическая область видимости простыми словами — это "коробка", внутри которой существует и видна переменная.
+		// лексическая область видимости (lexical scope) для каждой итерации цикла.
+
+		//то есть На первой итерации (i = 0), JavaScript создает новую "версию" переменной petElement,
+		// которая ссылается на элемент "Кошка" (id="cat").
+		// Когда назначается addEventListener, функция внутри запоминает (захватывает) ссылку именно на эту версию переменной.
+
+		// На второй итерации (i = 1), JavaScript создает совершенно новую "версию" переменной petElement,
+		// которая ссылается на элемент "Собака" (id="dog"). Функция для этого клика запоминает ссылку на эту вторую версию.
+
+			const petElement = petElements[i]
+		console.log(petElement)
 		petElement.addEventListener('click', () => {
+			console.log(petElement)
 			if (cart.length < 3) {
 				const petId = petElement.id
 				cart.push(petId);
